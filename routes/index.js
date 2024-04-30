@@ -1,9 +1,10 @@
 const express = require("express");
+const path = require("path");
 const router = express.Router();
 
 router.get("/", function (req, res, next) {
-//   res.render("index", { title: "Wiki home page" });
-  res.send("Wiki home page");
+  const htmlFilePath = path.join(__dirname, "..", "views", "index.html");
+  res.sendFile(htmlFilePath);
 });
 
 module.exports = router;

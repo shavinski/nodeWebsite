@@ -8,6 +8,7 @@ const port = 3000;
 
 const indexRouter = require("./routes/index");
 
+app.set("view engine", "ejs");
 app.use("/", indexRouter);
 
 app.listen(port, function () {
